@@ -1,0 +1,139 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+    margin: 0;
+}
+
+h4 {
+    font-size: 1.3em;
+}
+
+#userWrapper, #taskWrapper {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    margin: 0 auto;
+}
+
+.task-list {
+    text-align: center;
+}
+
+.task-list h4 {
+    margin-bottom: 5px;
+}
+
+.task-list > div {
+    background-color: #3B5ECA;
+    border: 2px solid #3232FF;
+    color: white;
+    margin: 5px;
+    padding: 10px;
+    position: relative;
+}
+
+#taskWrapper h4 {
+    margin-top: 0;
+    padding-top: 15px;
+}
+
+.user-number {
+    position: absolute;
+    bottom: 0;
+}
+
+.taskItem {
+    cursor: pointer;
+    cursor: move;
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.taskItem:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
+
+@media (max-width: 768px) {
+    .content {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        width: 90%;
+    }
+    #userWrapper, #taskWrapper {
+        width: 50%;
+        flex-direction: column;
+    }
+    .task-list > div {
+        min-height: 120px;
+    }
+    #user2 h4 {
+        margin-top: 0;
+        padding-top: 15px;
+    }
+    .user-number {
+        font-size: 3em;
+        right: 5px;
+    }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .task-list {
+        width: 33%;
+        width: 250px;
+    }
+    #userWrapper, #taskWrapper {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .task-list > div {
+        min-height: 300px;
+    }
+    #user2 {
+        margin-top: 40px;
+    }
+    #user3 {
+        margin-top: 80px;
+    }
+    .user-number {
+        font-size: 5em;
+        right: 15px;
+    }
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .content {
+        width: 1170px;
+    }
+    .task-list {
+        width: 300px;
+    }
+    .task-list > div {
+        margin: 0 auto;
+        width: 97%;
+    }
+}

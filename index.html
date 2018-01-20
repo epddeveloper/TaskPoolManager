@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <script src="node_modules/angular/angular.js"></script>
+        <script src="src/app.js"></script>
+        <script src="src/servis.js"></script>
+        <script src="src/draganddrop.js"></script>
+    </head>
+    <body ng-controller="TaskPoolManagerController" ng-init="init()">
+       <div class="content">
+           <div id="taskWrapper">
+               <div class="task-list">
+                   <h4>Tasks</h4>
+                   <div  ui-on-Drop="onDrop($event,$data,data.tasks)">
+                       <task-item tasks="data.tasks"></task-item>
+                   </div>
+               </div>
+           </div>
+           <div id="userWrapper">
+               <div id="user2" class="task-list">
+                   <h4>User 2</h4>
+                   <div ui-on-Drop="onDrop($event,$data,data.user2Tasks)">
+                       <task-item tasks="data.user2Tasks"></task-item>
+                       <div class="user-number">2</div>
+                   </div>
+               </div>
+               <div id="user1" class="task-list">
+                   <h4>User 1</h4>
+                   <div ui-on-Drop="onDrop($event,$data,data.user1Tasks)">
+                       <task-item tasks="data.user1Tasks"></task-item>
+                       <div class="user-number">1</div>
+                   </div>
+               </div>
+               <div id="user3" class="task-list">
+                   <h4>User 3</h4>
+                   <div ui-on-Drop="onDrop($event,$data,data.user3Tasks)">
+                       <task-item tasks="data.user3Tasks"></task-item>
+                       <div class="user-number">3</div>
+                   </div>
+               </div>
+           </div>
+       </div>
+    </body>
+</html>
